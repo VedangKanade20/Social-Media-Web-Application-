@@ -22,12 +22,12 @@ const UserSchema = new mongoose.Schema(
     },
     password: {
       type: String,
-      require: true,
+      required: true,
       min: 5,
     },
     picturePath: {
       type: String,
-      default: " ",
+      default: "",
     },
     friends: {
       type: Array,
@@ -42,5 +42,4 @@ const UserSchema = new mongoose.Schema(
 );
 
 const User = mongoose.model("User", UserSchema);
-
 export default User;
